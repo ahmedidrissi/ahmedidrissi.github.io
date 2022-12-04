@@ -90,17 +90,26 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div id="particles-js"></div>
-    <div class="hero-container mt-5" data-aos="fade-in">
-      <h1>Hi There,</h1>
-      <h1>I'm Ahmed IDRISSI</h1>
-      <p>I'm a <span class="typed" data-typed-items="Software Engineer, Sport Programmer, Designer"></span></p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/ahmed-idrissi-87508a249/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/ahmedidrissi" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-        <a href="https://twitter.com/ahmedIdr02" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.facebook.com/Ahmed.Idrissi.2002" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/idrissi_ahmed02/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+    <div class="row hero-container mt-5" data-aos="fade-in">
+      <div class="col-lg-8 my-auto">
+        <h1>Hi There,</h1>
+        <h1>I'm Ahmed IDRISSI</h1>
+        <p>I'm a <span class="typed" data-typed-items="Software Engineer, Sport Programmer, Designer"></span></p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/ahmed-idrissi-87508a249/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/ahmedidrissi" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+          <a href="https://twitter.com/ahmedIdr02" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.facebook.com/Ahmed.Idrissi.2002" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/idrissi_ahmed02/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        </div>
       </div>
+      <div class="col-lg-4 my-auto myavatar-container">
+        <model-viewer id="myavatar" shadow-intensity="1" src="https://api.readyplayer.me/v1/avatars/638bca9159d13f203a3472ac.glb"
+        alt="myavatar" auto-rotate camera-controls
+        poster="assets/avatar/avatar1.png"></model-viewer>
+      </div>
+    </div>
+    
     </div>
   </section><!-- End Hero -->
 
@@ -137,7 +146,7 @@
 
       </div>
     </section><!-- End About Section -->
-
+    
     <!-- ======= Skills Section ======= -->
     <section id="skills" class="skills section-bg">
       <div class="container">
@@ -652,7 +661,10 @@
   <!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/23491173.js"></script>
   <!-- End of HubSpot Embed Code -->
-  
+
+  <!-- Model Viewer JS File-->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 
 </body>
 

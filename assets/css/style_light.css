@@ -180,11 +180,6 @@ main{
   position: relative;
 }
 
-#hero .hero-container {
-  z-index: 2;
-  min-width: 300px;
-}
-
 #particles-js{
   position: absolute;
   width: 100%;
@@ -192,6 +187,16 @@ main{
   background: linear-gradient(to left, #09052c, #150052);
 }
 
+#hero .hero-container {
+  z-index: 2;
+  width: 85%;
+  height: 100vh;
+}
+
+#myavatar{
+  width: 90%;
+  height: 80vh;
+}
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
@@ -219,7 +224,11 @@ main{
     background-attachment: fixed;
   }
 }
-
+@media (max-width: 992px) {
+  .myavatar-container{
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   #hero h1 {
     font-size: 26px;
