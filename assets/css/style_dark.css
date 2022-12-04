@@ -198,13 +198,7 @@ main{
 
 #hero .hero-container {
   z-index: 2;
-  width: 85%;
-  height: 100vh;
-}
-
-#myavatar{
-  width: 90%;
-  height: 80vh;
+  min-width: 300px;
 }
 
 #hero h1 {
@@ -232,11 +226,6 @@ main{
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
-  }
-}
-@media (max-width: 992px) {
-  .myavatar-container{
-    display: none;
   }
 }
 @media (max-width: 768px) {
