@@ -964,7 +964,7 @@ section {
   position: static;
   width: auto;
   z-index: 9999;
-  background: #09052c;
+  background: linear-gradient(to left, #0f018b, #0c015e,#080044);
 }
 
 #footer i{
