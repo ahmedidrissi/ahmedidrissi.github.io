@@ -2,16 +2,28 @@
 # General
 --------------------------------------------------------------*/
 :root {
+  --theme1-color-1: #01FDF6;
+  --theme1-color-2: #32C3FE;
+  --theme1-color-3: #01fdb1;
+  --theme1-color-4: #24adfd;
+
+  --theme2-color-1: #fde401;
+  --theme2-color-2: #fe9f32;
+  --theme2-color-3: #fdc201;
+  --theme2-color-4: #fd7424;
+
+
   --main-bg-color: #07090e;
   --nav-bg-color: #0f1320;
   --color-1: #01FDF6;
   --color-2: #32C3FE;
-  --color-3: #03C988;
-  --color-4: #1C82AD;
+  --color-3: #01fdb1;
+  --color-4: #24adfd;
   --color-5: rgba(31, 35, 51, .3);
   --color-6: #e2e7fd;
   --footer-bg-color: #151822;
   --error-message: #01fd40;
+  --gradient: linear-gradient(to right, var(--color-2), var(--color-1));
 }
 
 /* width */
@@ -187,9 +199,6 @@ main{
   font-size: 16px;
 }
 
-#theme {
-  display: none;
-}
 #dropdown{
   background: var(--main-bg-color);
   color: #fff;
@@ -424,7 +433,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: var(--color-3);
+  background: var(--gradient);
 }
 
 /*--------------------------------------------------------------
