@@ -657,6 +657,25 @@ section {
   }
 }
 
+@media (max-width:992px) {
+  .contact .info {
+    padding: 15px 10px;
+  }
+  .contact .info p {
+    padding: 0 0 10px 50px;
+    font-size: 14px;
+  }
+  .contact .info h4 {
+    padding: 0 0 0 50px;
+    font-size: 18px;
+  }
+  .contact .info i {
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
