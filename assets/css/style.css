@@ -16,6 +16,10 @@
 
 /* width */
 ::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar:hover {
   width: 7px;
 }
 
@@ -26,7 +30,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--color-2);
+  background: var(--color-1);
 }
 
 /* Handle on hover */
@@ -113,7 +117,8 @@ main{
   left: 15px;
   bottom: 25px;
   z-index: 996;
-  background: var(--color-2);
+  background: var(--color-5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -122,14 +127,15 @@ main{
 
 .back-to-top i {
   font-size: 28px;
-  color: var(--color-6);;
+  color: var(--color-1);;
   line-height: 0;
 }
 
 .back-to-top:hover {
-  background: var(--color-1);
-  color: #fff;
+  background: var(--main-bg-color);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
+
 
 .back-to-top.active {
   visibility: visible;
@@ -141,7 +147,7 @@ main{
 --------------------------------------------------------------*/
 .navbar{
   background: var(--main-bg-color);
-  box-shadow: 0px 0 10px black;
+  box-shadow: 0 0 10px black;
 }
 .brand{
   font-family: 'Niconne';
@@ -155,6 +161,7 @@ main{
 
 .clock {
   background: var(--color-5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   height: auto;
   width: 150px;
   border-radius: 7px;
@@ -200,26 +207,6 @@ main{
   box-shadow: none;
 }
 
-.social-links a{
-  font-size: 18px;
-  display: inline-block;
-  padding: 8px 0;
-  color: var(--color-6);
-  background-color: var(--color-2);
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-.social-links a:hover{
-  background-color:var(--color-1);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-
-}
 @media (max-width: 992px) {
   .nav-menu{
     text-align: center;
@@ -271,7 +258,7 @@ main{
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 64px;
+  font-size: 60px;
   font-weight: 700;
   line-height: 56px;
   color: var(--color-6);
@@ -288,7 +275,29 @@ main{
   color: var(--color-6);
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid var(--color-2);
+  border-bottom: 3px solid var(--color-1);
+}
+
+.social-links a{
+  font-size: 18px;
+  display: inline-block;
+  padding: 8px 0;
+  color: var(--color-1);
+  background-color: var(--color-5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.social-links a:hover{
+  background-color:var(--main-bg-color);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 1024px) {
@@ -368,7 +377,7 @@ section {
 
 .about .content ul span {
   margin-right: 10px;
-  color: var(--color-3);
+  color: var(--color-1);
 }
 
 .about .content ul i {
@@ -625,7 +634,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background:var(--color-3);
+  background:var(--color-2);
   border: 0;
   padding: 10px 24px;
   color: var(--color-6);
