@@ -24,22 +24,10 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style_light.css" rel="stylesheet" id="style_link">
+  <link href="assets/css/style.css" rel="stylesheet" id="style_link">
 </head>
 
 <body>
-  <!-- Loading Modal -->
-  <div class="modal" id="LoadingModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen" >
-      <div class="modal-content" id="modal-content">
-        <div class="modal-body d-flex justify-content-center align-items-center">
-          <div id="spinner" class="spinner-grow d-flex justify-content-center align-items-center" role="status">
-            <h2>Ahmed <span>Idrissi</span></h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-2" id="navbar">
@@ -58,21 +46,24 @@
         </div>
         <div class="offcanvas-body">
           <ul class="nav-menu navbar-nav ms-auto">
+            <div class="clock">
+              <div class="display"></div>
+            </div>
             <li class="nav-item" ><a href="#hero" class="nav-link scrollto active d-flex flex-column align-items-center"><i class="bx bx-home"></i><span>Home</span></a></li>
             <li class="nav-item" ><a href="#about" class="nav-link scrollto d-flex flex-column align-items-center"><i class="bx bx-user"></i><span>About</span></a></li>
             <li class="nav-item" ><a href="#resume" class="nav-link scrollto d-flex flex-column align-items-center"><i class="bx bx-file-blank"></i><span>Resume</span></a></li>
             <li class="nav-item" ><a href="#contact" class="nav-link scrollto d-flex flex-column align-items-center"><i class="bx bx-envelope"></i><span>Contact</span></a></li>
-            <li class="nav-item dropdown-center">
+            <li class="nav-item dropdown-center" id="theme">
               <a href="#" class="nav-link d-flex flex-column align-items-center" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-bulb"></i><span>Theme</span></a>
               <ul class="dropdown-menu mx-5 mx-lg-0 px-5" id="dropdown">
                 <div class="form-check">
-                  <input onclick="switch_light()" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                  <input onclick="" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
                   <label class="form-check-label" for="flexRadioDefault1">
                     Light
                   </label>
                 </div>
                 <div class="form-check">
-                  <input onclick="switch_dark()" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                  <input onclick="" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                   <label class="form-check-label" for="flexRadioDefault2">
                     Dark
                   </label>
@@ -89,16 +80,26 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div id="particles-js"></div>
     <div class="hero-container mt-5" data-aos="fade-in">
-        <h1>Hi There,</h1>
-        <h1>I'm Ahmed IDRISSI</h1>
-        <p>I'm a <span class="typed" data-typed-items="Software Engineer, Sport Programmer, Designer"></span></p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/ahmed-idrissi-87508a249/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/ahmedidrissi" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://twitter.com/ahmedIdr02" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.facebook.com/Ahmed.Idrissi.2002" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/idrissi_ahmed02/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+      <div class="row">
+        <div class="col-lg-7 cols-12 my-auto">
+          <h1>Hi There,</h1>
+          <h1>I'm Ahmed IDRISSI</h1>
+          <p>I'm a <span class="typed" data-typed-items="Software Engineer, Competitive Programmer, Designer"></span></p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/ahmed-idrissi-87508a249/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/ahmedidrissi" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+            <a href="https://twitter.com/ahmedIdr02" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.facebook.com/Ahmed.Idrissi.2002" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com/idrissi_ahmed02/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+          </div>
         </div>
+        <div class="col-lg-5 col-0 my-auto">
+          <div class="hello-world">
+            <img id="hello-world" src="/assets/img/hello_world.png" alt="">
+          </div>
+        </div>
+      </div>
+        
     </div>
   </section><!-- End Hero -->
 
@@ -109,26 +110,25 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>I'm a software engineering student at ENSIAS, it's one of the prestigious computer science schools in Morocco. <br><br>
-            I'm also a member at IEEE ENSIAS Student Branch, IEEE is a nonprofit professional association and our Student Branch aims,
-            like the rest of its international peers, to promote scientific knowledge in the field of engineering. <br><br>
-            I'm passionate about software development and artificial intelligence.</p>
+          
         </div>
 
         <div class="row">
-          <div class="col-0 col-lg-2"></div>
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.png" class="img-fluid" alt="">
+          <div class="col-lg-7">
+            <p>I'm a software engineering student at ENSIAS, it's one of the prestigious computer science schools in Morocco. <br><br>
+              I'm also a member at IEEE ENSIAS Student Branch, IEEE is a nonprofit professional association and our Student Branch aims,
+              like the rest of its international peers, to promote scientific knowledge in the field of engineering. <br><br>
+              I'm passionate about software development and artificial intelligence.</p>
           </div>
-          <div class="col-lg-6 pt-3 pt-lg-0 content" data-aos="fade-left">
+          <div class="col-lg-5 pt-3 pt-lg-0 content" data-aos="fade-left">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Engineering Student</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>11 September 2002</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Casablanca, Morocco</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>20</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>(+212) 622406448</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.idrissiahmed.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>idrissiahmed2002@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <span>Degree :</span> Engineering Student</li>
+                  <li><i class="bi bi-chevron-right"></i> <span>Birthday :</span> 11 September 2002</li>
+                  <li><i class="bi bi-chevron-right"></i> <span>City :</span> Casablanca, Morocco</li>
+                  <li><i class="bi bi-chevron-right"></i> <span>Age :</span> 20</li>
+                  <li><i class="bi bi-chevron-right"></i> <span>Phone :</span> (+212) 622406448</li>
+                  <li><i class="bi bi-chevron-right"></i> <span>Website :</span> www.idrissiahmed.com</li>
+                  <li><i class="bi bi-chevron-right"></i> <span>Email :</span> idrissiahmed2002@gmail.com</li>
                 </ul>
           </div>
         </div>
@@ -299,7 +299,6 @@
                 With the Kaggle's Chest X - Ray dataset, I develop a Deep Learning Model to classify the X Rays of Healthy vs Pneumonia affected patients.
               </p>
               <h6>Project link : <a href="https://github.com/ahmedidrissi/TIPE-2022" target="_blank">https://github.com/ahmedidrissi/TIPE-2022</a></h6>
-              <img src="assets/img/tipe_bg.png" class="img-fluid" alt="Jaafar Times Magazine">           
             </div>
           </div>
           <div class="col-lg-12" data-aos="fade-up">
@@ -312,7 +311,6 @@
                 which won the 3rd prize in the national competition of school journalism in Morocco, 
                 issued by Regional Academy of Darâa Tafilalet</p>
               <h6>E-Magazine link : <a href="http://bit.ly/Jaafartimes" target="_blank">http://bit.ly/Jaafartimes</a></h6>
-              <img src="assets/img/jtm.jfif" class="img-fluid" alt="Jaafar Times Magazine">
             </div> 
           </div>
         </div>
@@ -409,14 +407,30 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/particles.js"></script> 
   <script src="assets/js/app.js"></script>
-  <script src="assets/js/switch.js"></script>
-  <script src="assets/js/modal.js"></script>
-  
-  <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/23491173.js"></script>
-  <!-- End of HubSpot Embed Code -->
+
+  <!-- Digital Clock -->
+  <script>
+    setInterval(function(){
+      const clock = document.querySelector(".display");
+      let time = new Date();
+      let sec = time.getSeconds();
+      let min = time.getMinutes();
+      let hr = time.getHours();
+      let day = 'PM'
+      if (sec < 10) {
+        sec = '0' + sec;
+      }
+      if (min < 10) {
+        min = '0' + min;
+      }
+      if (hr < 10) {
+        hr = '0' + hr;
+      }
+      clock.textContent = hr + ':' + min + ':' + sec + ' ' + day;
+    });
+  </script>
 
 </body>
 
