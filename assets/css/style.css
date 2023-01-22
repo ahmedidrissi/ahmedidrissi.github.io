@@ -164,7 +164,7 @@ main{
 }
 
 .clock .display {
-  padding: 5px 10px;
+  padding: 6px 10px;
   text-align: center;
   color: var(--color-1);
   font-size: 14px;
@@ -230,19 +230,13 @@ main{
   .offcanvas{
     color: #fff;
     background: var(--main-bg-color);
+    
+  }
+  .offcanvas ul li{
+    padding: 0;
   }
   .clock {
-    margin: 10px 0;
-    margin-right: 0;
-  }
-  
-  .clock .display {
-    padding: 5px 10px;
-    text-align: center;
-    color: var(--color-1);
-    font-size: 16px;
-    letter-spacing: 1px;
-    font-family: 'Arial', sans-serif;
+    margin: 10px auto;
   }
 }
 /*--------------------------------------------------------------
