@@ -1,22 +1,22 @@
-// Get the root element
-var r = document.querySelector(':root');
-
-function Theme1() {
-    link = document.getElementById("hello-world");
-    link.setAttribute("src", "assets/img/hello_world_1.png")
-    var rs = getComputedStyle(r);
-    r.style.setProperty('--color-1', rs.getPropertyValue('--theme1-color-1'));
-    r.style.setProperty('--color-2', rs.getPropertyValue('--theme1-color-2'));
-    r.style.setProperty('--color-3', rs.getPropertyValue('--theme1-color-3'));
-    r.style.setProperty('--color-4', rs.getPropertyValue('--theme1-color-4'));
-  }
-
-function Theme2() {
+function setTheme(themeName, imagePath) {
   link = document.getElementById("hello-world");
-  link.setAttribute("src", "assets/img/hello_world_2.png")
-  var rs = getComputedStyle(r);
-  r.style.setProperty('--color-1', rs.getPropertyValue('--theme2-color-1'));
-  r.style.setProperty('--color-2', rs.getPropertyValue('--theme2-color-2'));
-  r.style.setProperty('--color-3', rs.getPropertyValue('--theme2-color-3'));
-  r.style.setProperty('--color-4', rs.getPropertyValue('--theme2-color-4'));
+  link.setAttribute("src", imagePath)
+  localStorage.setItem('theme', themeName);
+  document.documentElement.className = themeName;
+}
+
+function switchTheme() {
+  if (localStorage.getItem('theme') == 'theme-1') {
+    setTheme('theme-2', "assets/img/hello_world_2.png");
+  } else {
+    setTheme('theme-1', "assets/img/hello_world_1.png");
+  }
+}
+
+function loadTheme() {
+  if (localStorage.getItem('theme') == 'theme-1') {
+    setTheme('theme-1', "assets/img/hello_world_1.png");
+  } else {
+    setTheme('theme-2', "assets/img/hello_world_2.png");
+  }
 }

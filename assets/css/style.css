@@ -1,24 +1,21 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-:root {
-  --theme1-color-1: #01FDF6;
-  --theme1-color-2: #32C3FE;
-  --theme1-color-3: #01fdb1;
-  --theme1-color-4: #24adfd;
-
-  --theme2-color-1: #fde401;
-  --theme2-color-2: #fe9f32;
-  --theme2-color-3: #fdc201;
-  --theme2-color-4: #fd7424;
-
-
-  --main-bg-color: #07090e;
-  --nav-bg-color: #0f1320;
+.theme-1 {
   --color-1: #01FDF6;
   --color-2: #32C3FE;
   --color-3: #01fdb1;
   --color-4: #24adfd;
+}
+.theme-2 {
+  --color-1: #fde401;
+  --color-2: #fe9f32;
+  --color-3: #fdc201;
+  --color-4: #fd7424;
+}
+:root {
+  --main-bg-color: #07090e;
+  --nav-bg-color: #0f1320;
   --color-5: rgba(31, 35, 51, .3);
   --color-6: #e2e7fd;
   --footer-bg-color: #151822;
