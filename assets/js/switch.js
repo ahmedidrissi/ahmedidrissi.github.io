@@ -14,9 +14,9 @@ function switchTheme() {
 }
 
 function loadTheme() {
-  if (localStorage.getItem('theme') == 'theme-1') {
-    setTheme('theme-1', "assets/img/hello_world_1.png");
+  if (localStorage.getItem('theme') == 'theme-2') {
+    setTheme('theme-2', "assets/img/hello_world_1.png");
   } else {
-    setTheme('theme-2', "assets/img/hello_world_2.png");
+    setTheme('theme-1', "assets/img/hello_world_2.png");
   }
 }
