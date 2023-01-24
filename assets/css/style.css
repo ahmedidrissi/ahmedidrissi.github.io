@@ -16,6 +16,7 @@
 :root {
   --main-bg-color: #07090e;
   --secondary-bg-color: rgba(31, 35, 51, .3);
+  --navbar-bg-color: #0a0d14;
   --main-text-color: #e2e7fd;
   --footer-bg-color: #151822;
   --error-message: #01fd40;
@@ -154,7 +155,7 @@ main{
 # Header
 --------------------------------------------------------------*/
 .navbar{
-  background: var(--main-bg-color);
+  background: var(--navbar-bg-color);
   box-shadow: 0 0 10px black;
 }
 .brand{
