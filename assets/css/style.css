@@ -155,8 +155,9 @@ main{
 # Header
 --------------------------------------------------------------*/
 .navbar{
-  background: var(--navbar-bg-color);
+  background: var(--main-bg-color);
   box-shadow: 0 0 10px black;
+  opacity: .95;
 }
 .brand{
   font-family: 'Niconne';
