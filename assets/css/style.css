@@ -458,6 +458,33 @@ section {
     font-size: 15px;
   }
 }
+
+/*--------------------------------------------------------------
+# Tools & Tech
+--------------------------------------------------------------*/
+.tools-tech .tools-tech-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.tools-tech .icon-bg{
+  width: 90px;
+  height: 90px;
+  color: var(--main-text-color);
+  background: var(--secondary-bg-color);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tools-tech i {
+  font-size: 50px;
+}
+.tools-tech .icon-bg:hover {
+  border-color: var(--color-1);
+}
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
