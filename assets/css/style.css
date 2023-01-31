@@ -25,10 +25,6 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar:hover {
   width: 7px;
 }
 
@@ -44,7 +40,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-1);
+  background: var(--color-3);
 }
 
 @font-face {
@@ -259,6 +255,8 @@ main{
   height: 100vh;
   position: relative;
   border: none;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 #hello-world {
@@ -386,6 +384,7 @@ section {
   margin: 20px 0;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.7);
   overflow: hidden;
   background: var(--secondary-bg-color);
 }
@@ -471,19 +470,40 @@ section {
 .tools-tech .icon-bg{
   width: 90px;
   height: 90px;
-  color: var(--main-text-color);
   background: var(--secondary-bg-color);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  transition: border-color 1s, box-shadow 1s;
 }
-.tools-tech i {
-  font-size: 50px;
+.tools-tech .icon-bg span{
+  font-size: 14px;
+  text-align: center;
+  color: var(--color-1);
+  font-weight: bold;
+  display: none;
+}
+.tools-tech .icon-bg img{
+  transition: top 0s, left 0s;
 }
 .tools-tech .icon-bg:hover {
   border-color: var(--color-1);
+  width: 95px;
+  height: 95px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.7);
+}
+.tools-tech .icon-bg:hover img{
+  width: 20px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.tools-tech .icon-bg:hover span{
+  display: block;
 }
 /*--------------------------------------------------------------
 # Skills
