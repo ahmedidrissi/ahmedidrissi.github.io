@@ -20,3 +20,5 @@ function loadTheme() {
     setTheme('theme-1', "assets/img/hello_world_1.png");
   }
 }
+
+window.addEventListener('load', loadTheme);
