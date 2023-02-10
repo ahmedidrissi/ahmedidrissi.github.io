@@ -20,3 +20,5 @@ function showClock(){
     }
     clock.textContent = hr + ':' + min + ':' + sec + ' ' + day;
 }
+
+window.addEventListener('load', setInterval(showClock));
