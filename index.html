@@ -28,12 +28,28 @@
   <link href="assets/css/style.css" rel="stylesheet" id="style_link">
 </head>
 
+
+
 <body>
+  <div class="preloader">
+    <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner"></div>
   
+        <div class="indicator"> 
+            <svg width="16px" height="12px">
+                <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+            </svg>
+        </div>
+    </div>
+  </div>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
     <div class="container">
-      <a href="index.html" class="brand navbar-brand">Ahmed <span>Idrissi</span></a>
+      <a href="index.html" class="brand navbar-brand d-flex align-items-center gap-2"> 
+        <object type="image/svg+xml" data="assets/svg/logo.svg" style="width: 40px; height: 40px;"></object>Ahmed <span>Idrissi</span>
+      </a>
       <button 
       class="toggler navbar-toggler" 
       type="button" 
@@ -92,6 +108,7 @@
   </section><!-- End Hero -->
 
   <main id="main">
+    
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
@@ -124,7 +141,7 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- Tools & Tech -->
+    <!-- Tools & Techs -->
     <section id="tools-tech" class="tools-tech">
       <div class="container">
         <div class="section-title">
@@ -382,30 +399,13 @@
     loadTheme();
   </script>
 
+  <!-- Preloader -->
+  <script src="assets/js/preloader.js"></script>
+
   <!-- Digital Clock -->
+  <script src="assets/js/clock.js"></script>
   <script>
-    setInterval(function(){
-      const clock = document.querySelector(".display");
-      let time = new Date();
-      let sec = time.getSeconds();
-      let min = time.getMinutes();
-      let hr = time.getHours();
-      let day = 'AM'
-      if (hr > 12) {
-        day = 'PM'
-        hr = hr - 12
-      }
-      if (sec < 10) {
-        sec = '0' + sec;
-      }
-      if (min < 10) {
-        min = '0' + min;
-      }
-      if (hr < 10) {
-        hr = '0' + hr;
-      }
-      clock.textContent = hr + ':' + min + ':' + sec + ' ' + day;
-    });
+    setInterval(showClock);
   </script>
   
   <script src="assets/js/matrix.js"></script>
