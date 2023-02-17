@@ -658,7 +658,14 @@ section {
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: border-color 1s, box-shadow 1s;
+  transition: box-shadow 1s, border-color 1s;
+}
+.tools-tech .icon-bg:hover{
+  width: 95px;
+  height: 95px;
+  border-color: var(--color-1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+  transition: top 0s, left 0s;
 }
 .tools-tech .icon-bg span{
   font-size: 14px;
@@ -667,19 +674,13 @@ section {
   font-weight: bold;
   display: none;
 }
-.tools-tech .icon-bg:hover {
-  border-color: var(--color-1);
-  width: 95px;
-  height: 95px;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.7);
-}
-.tools-tech .icon-bg:hover img{
+.tools-tech .icon-bg:hover > img{
   width: 20px;
   position: absolute;
   top: 5px;
   left: 5px;
 }
-.tools-tech .icon-bg:hover span{
+.tools-tech .icon-bg:hover > span{
   display: block;
 }
 /*--------------------------------------------------------------
