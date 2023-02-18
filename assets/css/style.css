@@ -16,7 +16,9 @@
 :root {
   --main-bg-color: #07090e;
   --primary-bg-color: rgb(8, 11, 17);
-  --secondary-bg-color: rgba(31, 35, 51, .3);
+  --primary-bg-color-transparent: rgba(8, 11, 17, 0.8);
+  --secondary-bg-color: rgb(31, 35, 51);
+  --secondary-bg-color-transparent: rgba(31, 35, 51, .3);
   --navbar-bg-color: rgba(11, 13, 20, 0.8);
   --main-text-color: #e2e7fd;
   --footer-bg-color: #151822;
@@ -31,7 +33,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--secondary-bg-color);
+  background: var(--secondary-bg-color-transparent);
 }
 
 /* Handle */
@@ -303,7 +305,7 @@ main{
   left: 15px;
   bottom: 25px;
   z-index: 996;
-  background: var(--secondary-bg-color);
+  background: var(--secondary-bg-color-transparent);
   border: 1px solid rgba(255, 255, 255, 0.1);
   width: 40px;
   height: 40px;
@@ -358,7 +360,7 @@ main{
 }
 
 .clock {
-  background: var(--secondary-bg-color);
+  background: var(--secondary-bg-color-transparent);
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: auto;
   width: 150px;
@@ -486,7 +488,7 @@ main{
   font-size: 18px;
   display: inline-block;
   color: var(--color-1);
-  background-color: var(--secondary-bg-color);
+  background-color: var(--secondary-bg-color-transparent);
   border: 1px solid rgba(255, 255, 255, 0.1);
   line-height: 1;
   padding: 8px 0;
@@ -567,7 +569,7 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.7);
   overflow: hidden;
-  background: var(--secondary-bg-color);
+  background: var(--secondary-bg-color-transparent);
 }
 
 .section-title h2 {
@@ -774,7 +776,9 @@ section {
   min-width: 250px;
   padding: 1.5rem;
   border-radius: 10px;
-  background: var(--primary-bg-color);
+  background: var(--primary-bg-color-transparent);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1); 
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
   display: flex;
@@ -834,7 +838,7 @@ section {
   font-size: 10px;
   color: #7a7a8c;
   text-transform: uppercase;
-  border: 1px solid var(--secondary-bg-color);
+  border: 1px solid var(--secondary-bg-color-transparent);
   border-radius: 1rem;
   padding: .2rem .85rem .25rem;
   position: relative;
@@ -851,7 +855,7 @@ section {
 
 .contact .info {
   padding: 30px;
-  background: var(--secondary-bg-color);
+  background: var(--secondary-bg-color-transparent);
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   border-radius: 10px;
@@ -910,7 +914,7 @@ section {
   width: 100%;
   padding: 30px;
   color: var(--main-text-color);
-  background: var(--secondary-bg-color);
+  background: var(--secondary-bg-color-transparent);
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   border-radius: 10px;
 }
@@ -930,7 +934,7 @@ section {
 .contact .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: var(--secondary-bg-color);
+  background: var(--secondary-bg-color-transparent);
   text-align: left;
   padding: 15px;
   font-weight: 600;
@@ -981,7 +985,7 @@ section {
   border-radius: 5px;
   box-shadow: none;
   font-size: 14px;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--secondary-bg-color-transparent);
   color: var(--main-text-color);
 }
 
