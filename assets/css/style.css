@@ -15,6 +15,7 @@
 }
 :root {
   --main-bg-color: #07090e;
+  --primary-bg-color: rgb(8, 11, 17);
   --secondary-bg-color: rgba(31, 35, 51, .3);
   --navbar-bg-color: rgba(11, 13, 20, 0.8);
   --main-text-color: #e2e7fd;
@@ -567,11 +568,6 @@ section {
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.7);
   overflow: hidden;
   background: var(--secondary-bg-color);
-  transition: border-color 1.5s;
-}
-
-section:hover{
-  border-color: var(--color-1);
 }
 
 .section-title h2 {
@@ -599,7 +595,7 @@ section:hover{
 
 @media (max-width: 768px) {
   section {
-    padding: 30px 5px;
+    padding: 20px 5px;
   }
   .section-title h2 {
     font-size: 28px;
@@ -647,6 +643,10 @@ section:hover{
 /*--------------------------------------------------------------
 # Tools & Tech
 --------------------------------------------------------------*/
+.tools-tech{
+  background: var(--main-bg-color);
+}
+
 .tools-tech .tools-tech-icon{
   display: flex;
   justify-content: center;
@@ -656,7 +656,7 @@ section:hover{
 .tools-tech .icon-bg{
   width: 90px;
   height: 90px;
-  background: var(--secondary-bg-color);
+  background: var(--primary-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
@@ -689,58 +689,7 @@ section:hover{
 .tools-tech .icon-bg:hover > span{
   display: block;
 }
-/*--------------------------------------------------------------
-# Skills
---------------------------------------------------------------*/
-#matrix {
-  width: 100%;
-  height: 100%;
-  margin: -30px 0 0 -20px;
-  position: absolute;
-  z-index: 9;
-  opacity: 0.1;
-}
 
-.skills {
-  background: var(--main-bg-color);
-  position: relative;
-  
-}
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-
-.skills .progress .skill {
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color:white;
-}
-
-.skills .progress-bar-wrap {
-  background: #dedcf8;
-  height: 10px;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background: var(--main-gradient-color);
-}
-
-@media (max-width: 768px) {
-  #matrix {
-    margin: -30px 0 0 -5px;
-    position: absolute;
-  }
-}
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
@@ -800,6 +749,96 @@ section:hover{
   top: 0;
   background: #fff;
   border: 2px solid var(--color-3);
+}
+
+/*--------------------------------------------------------------
+# Projects Section
+--------------------------------------------------------------*/
+.projects {
+  display: flex;
+  padding: 3rem;
+  overflow-x: scroll;
+  background: var(--main-bg-color);
+}
+.projects::-webkit-scrollbar {
+  display: none; 
+}
+
+#projects .section-title{
+  display: block; 
+}
+
+#projects .card {
+  height: 350px;
+  width: 400px;
+  min-width: 250px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: var(--primary-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  transition: .2s;
+  margin: 0;
+  scroll-snap-align: start;
+  clear: both;
+  position: relative;
+  transition: border-color 1s;
+}
+#projects .card:focus-within~.card, #projects .card:hover~.card {
+  transform: translateX(130px);
+}
+#projects .card:hover {
+  transform: translateY(-1rem);
+  border-color: var(--color-1);
+}
+#projects .card:not(:first-child) {
+  margin-left: -130px;
+}
+
+#projects .date-links {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 8px;
+}
+#projects .card-header h6 {
+  font-size: 12px;
+  color: var(--color-3);
+}
+#projects .card-header i {
+  font-size: 18px;
+  color: var(--color-3);
+  position: absolute;
+  right:0; 
+  top: 0;
+  
+}
+#projects .card-header h2 {
+  font-size: 20px; 
+  text-decoration: none;
+  color: var(--main-text-color);  
+  display: inline-block;
+}
+
+#projects .card-body {
+  font-size: 12px;
+  color: var(--main-text-color);
+  opacity: .7;
+}
+
+#projects .card-footer a {
+  font-style: normal;
+  font-weight: 700; 
+  font-size: 10px;
+  color: #7a7a8c;
+  text-transform: uppercase;
+  border: 1px solid var(--secondary-bg-color);
+  border-radius: 1rem;
+  padding: .2rem .85rem .25rem;
+  position: relative;
+  cursor: text;
 }
 
 /*--------------------------------------------------------------
