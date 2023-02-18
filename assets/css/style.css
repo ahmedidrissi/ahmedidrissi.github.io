@@ -764,7 +764,6 @@ section {
   overflow-x: scroll;
   border-radius: 10px; 
   width: 100%;
-  justify-content: center;
 }
 #projects .projects-slider::-webkit-scrollbar {
   display: none; 
