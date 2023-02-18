@@ -764,6 +764,7 @@ section {
   overflow-x: scroll;
   border-radius: 10px; 
   width: 100%;
+  justify-content: center;
 }
 #projects .projects-slider::-webkit-scrollbar {
   display: none; 
@@ -775,9 +776,9 @@ section {
 
 #projects .card {
   height: 350px;
-  width: 400px;
+  width: 300px;
   min-width: 250px;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 10px;
   background: var(--primary-bg-color-transparent);
   -webkit-backdrop-filter: blur(5px);
@@ -791,8 +792,8 @@ section {
   scroll-snap-align: start;
   clear: both;
   position: relative;
-  transition: border-color 1s, transform 0.5s;
-  transition-timing-function: ease-in-out ;
+  transition: border-color 1s;
+  cursor: default;  
 }
 #projects .card:focus-within~.card, #projects .card:hover~.card {
   transform: translateX(131px); 
@@ -806,18 +807,20 @@ section {
   margin-left: -130px;
 }
 
-#projects .date-links {
+#projects .card-header{
+  height: auto;
+}
+#projects .card-header .date-links {
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 8px;
 }
-#projects .card-header h6 {
+#projects .card-header .date-links h6 {
   font-size: 12px;
   color: var(--color-3);
 }
-#projects .card-header i {
-  font-size: 18px;
+#projects .card-header .date-links i {
+  font-size: 15px;
   color: var(--color-3);
   position: absolute;
   right:0; 
@@ -825,18 +828,25 @@ section {
   
 }
 #projects .card-header h2 {
-  font-size: 20px; 
-  text-decoration: none;
+  font-size: 18px; 
   color: var(--main-text-color);  
-  display: inline-block;
+}
+#projects .card-header p {
+  font-size: 12px; 
+  color: var(--main-text-color);  
 }
 
 #projects .card-body {
   font-size: 12px;
   color: var(--main-text-color);
   opacity: .7;
+  overflow-y: hidden;
 }
 
+#projects .card-footer {
+  height: auto;
+  padding-top: 15px;
+}
 #projects .card-footer a {
   font-style: normal;
   font-weight: 700; 
@@ -847,7 +857,7 @@ section {
   border-radius: 1rem;
   padding: .2rem .85rem .25rem;
   position: relative;
-  cursor: text;
+  cursor: default;
 }
 
 /*--------------------------------------------------------------
