@@ -57,23 +57,15 @@
   /*-------------------------------------------
   Navbar display state on scroll
   -------------------------------------------*/
-  // Initial state
-  var scrollPos = 0;
+  let navblur = select('#navblur');
   // adding scroll event
   window.addEventListener('scroll', function(){
-    // detects new state and compares it with the new one
     if ((document.body.getBoundingClientRect()).top < -100) { 
-      document.getElementById('navblur').classList.add('navblur');
+      navblur.classList.add('navblur');
     } 
     else {
-      document.getElementById('navblur').classList.remove('navblur');
+      navblur.classList.remove('navblur');
     }
-    if ((document.body.getBoundingClientRect()).top < scrollPos)
-      document.getElementById('navbar').classList.add('navbar-off');
-    else 
-      document.getElementById('navbar').classList.remove('navbar-off');
-    // saves the new position for iteration.
-    scrollPos = (document.body.getBoundingClientRect()).top;
   });
 
   /*-------------------------------------------
@@ -102,33 +94,6 @@
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
-
-  /*-------------------------------------------
-  Mobile nav toggle
-  -------------------------------------------*/
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('body').classList.toggle('mobile-nav-active')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
-
-  /*-------------------------------------------
-  Scrool with ofset on links with a class name .scrollto
-  -------------------------------------------*/
-  on('click', '.scrollto', function(e) {
-    if (select(this.hash)) {
-      e.preventDefault()
-
-      let body = select('body')
-      if (body.classList.contains('mobile-nav-active')) {
-        body.classList.remove('mobile-nav-active')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-      scrollto(this.hash)
-    }
-  }, true)
   
   /*-------------------------------------------
   Scroll with ofset on page load with hash links in the url
