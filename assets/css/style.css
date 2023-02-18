@@ -333,9 +333,6 @@ main{
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.navbar-off{
-  display: none;
-}
 .navbar .container{
   position: relative;
 }
@@ -343,6 +340,7 @@ main{
   position: absolute;
   background-color: var(--navbar-bg-color);
   box-shadow: 0 0 10px black;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   width: 100%;
   height: 100%;
