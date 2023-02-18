@@ -684,7 +684,7 @@ section {
   width: 20px;
   position: absolute;
   top: 5px;
-  left: 5px;
+  left: 5px; 
 }
 .tools-tech .icon-bg:hover > span{
   display: block;
@@ -763,6 +763,7 @@ section {
   padding: 1rem 0;
   overflow-x: scroll;
   border-radius: 10px; 
+  width: 100%;
 }
 #projects .projects-slider::-webkit-scrollbar {
   display: none; 
@@ -790,14 +791,16 @@ section {
   scroll-snap-align: start;
   clear: both;
   position: relative;
-  transition: border-color 1s;
+  transition: border-color 1s, transform 0.5s;
+  transition-timing-function: ease-in-out ;
 }
 #projects .card:focus-within~.card, #projects .card:hover~.card {
-  transform: translateX(130px);
+  transform: translateX(131px); 
 }
 #projects .card:hover {
-  transform: translateY(-1rem);
   border-color: var(--color-1);
+  transform: translateY(-5px);
+  height: 360px; 
 }
 #projects .card:not(:first-child) {
   margin-left: -130px;
