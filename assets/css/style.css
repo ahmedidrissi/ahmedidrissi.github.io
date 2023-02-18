@@ -844,7 +844,8 @@ section {
 
 #projects .card-footer {
   height: auto;
-  padding-top: 15px;
+  width: 100%;
+  padding: 15px 10px 0; 
 }
 #projects .card-footer a {
   font-style: normal;
