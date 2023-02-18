@@ -754,13 +754,17 @@ section {
 /*--------------------------------------------------------------
 # Projects Section
 --------------------------------------------------------------*/
-.projects {
-  display: flex;
-  padding: 3rem;
-  overflow-x: scroll;
+#projects {
   background: var(--main-bg-color);
 }
-.projects::-webkit-scrollbar {
+
+#projects .projects-slider {
+  display: flex;
+  padding: 1rem 0;
+  overflow-x: scroll;
+  border-radius: 10px; 
+}
+#projects .projects-slider::-webkit-scrollbar {
   display: none; 
 }
 
