@@ -767,26 +767,34 @@ section {
   background: var(--main-bg-color);
 }
 
-#projects .projects-slider {
-  display: flex;
-  padding: 1rem 0;
-  overflow-x: scroll;
-  border-radius: 10px; 
-  width: 100%;
-}
-#projects .projects-slider::-webkit-scrollbar {
-  display: none; 
-}
-
 #projects .section-title{
   display: block; 
 }
 
+#projects .projects-swiper{
+  padding: 40px 50px;
+}
+
+#projects .nav-btn{
+  color: var(--color-1);
+}
+
+#projects .nav-btn:hover{
+  color: var(--color-3);
+}
+
+#projects .nav-btn::before, #projects .nav-btn::after{
+  font-size: 24px;
+}
+
+#projects .swiper-pagination-bullet{
+  background-color: var(--color-1);
+}
+
 #projects .card {
   height: 350px;
-  width: 300px;
-  min-width: 250px;
-  padding: 1rem;
+  padding: 10px 0;
+  margin: 0;
   border-radius: 10px;
   background: var(--primary-bg-color-transparent);
   -webkit-backdrop-filter: blur(5px);
@@ -795,24 +803,10 @@ section {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
-  transition: .2s;
-  margin: 0;
-  scroll-snap-align: start;
-  clear: both;
-  position: relative;
-  transition: border-color 1s;
-  cursor: default;  
-}
-#projects .card:focus-within~.card, #projects .card:hover~.card {
-  transform: translateX(131px); 
+  transition: border-color .5s;
 }
 #projects .card:hover {
   border-color: var(--color-1);
-  transform: translateY(-5px);
-  height: 360px; 
-}
-#projects .card:not(:first-child) {
-  margin-left: -130px;
 }
 
 #projects .card-header{
@@ -869,6 +863,20 @@ section {
   cursor: default;
 }
 
+@media (min-width:720px) {
+  #projects .card{
+    width: 250px;
+    min-width: 250px;
+  }
+}
+@media (max-width: 720px) {
+  #projects .card{
+    padding: 10px 0;
+  }
+  #projects .nav-btn{
+    display: none;
+  }
+}
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
