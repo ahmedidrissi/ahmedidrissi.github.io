@@ -505,10 +505,11 @@ main{
   width: 36px;
   height: 36px;
   transition: 0.3s;
+  opacity: 0.9;
 }
 
 .social-links a:hover{
-  background-color: var(--main-bg-color);
+  opacity: 1;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
