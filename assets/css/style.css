@@ -538,7 +538,7 @@ main{
   color: var(--main-bg-color);
 }
 .cv a.contact-btn {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--secondary-bg-color-transparent);
   color: var(--color-1);
   border: 1px solid var(--color-1);
 }
