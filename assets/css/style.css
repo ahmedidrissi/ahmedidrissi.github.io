@@ -514,13 +514,14 @@ main{
 }
 
 .cv {
-  margin-top: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
 }
 .cv a{
   margin-top: 20px;
-  background-color: var(--color-1);
-  color: var(--main-bg-color);
   font-size: 18px;
   font-weight: 600;
   width: 200px;
@@ -530,8 +531,16 @@ main{
   text-align: center;
 }
 .cv a:hover{
-  color: var(--secondary-bg-color);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.cv a.cv-btn {
+  background-color: var(--color-1);
+  color: var(--main-bg-color);
+}
+.cv a.contact-btn {
+  background-color: var(--secondary-bg-color);
+  color: var(--color-1);
+  border: 1px solid var(--color-1);
 }
 
 @media (min-width: 1024px) {
@@ -551,7 +560,8 @@ main{
     margin: 20px 80px 0;
   }
   .cv{
-    margin: 20px 80px 0;
+    gap: 0;
+    flex-direction: column;
   }
   #hello-world {
     display: none;
@@ -583,13 +593,8 @@ main{
     width: 34px;
     height: 34px;
   }
-  .cv{
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 15px;
-  }
   .cv a{
-    font-size: 16px;
+    font-size: 14px;
     width: 150px;
   }
   #hello-world {
@@ -1064,16 +1069,20 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background:var(--color-2);
   border: 0;
   padding: 10px 24px;
-  color: var(--main-text-color);
+  background:var(--color-1);
+  color: var(--main-bg-color);
   transition: 0.4s;
   border-radius: 4px;
+  font-weight: 600;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background:var(--color-1);
+  background-color: var(--secondary-bg-color);
+  color: var(--color-1);
+  border: 1px solid var(--color-1);
+
 }
 
 @-webkit-keyframes animate-loading {
