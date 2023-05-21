@@ -993,6 +993,7 @@ section {
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .contact .info i {
@@ -1051,6 +1052,38 @@ section {
   background: var(--secondary-bg-color-transparent);
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+}
+.contact .php-email-form::before{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(8deg, transparent, #45f3ff, #45f3ff);
+  transform-origin: bottom right;
+  animation: animate-form 6s linear infinite;
+  z-index: -2;
+}
+.contact .php-email-form::after{
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 10px;
+  background: #0e1119;
+  z-index: -1;
+}
+
+@keyframes animate-form{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
 }
 
 .contact .php-email-form .form-group {
