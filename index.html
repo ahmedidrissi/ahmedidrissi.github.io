@@ -35,6 +35,7 @@
 
 
 <body>
+  <div id="particles-js"></div>
   <!-- Preloader -->
   <div class="preloader">
     <div class="loader">
@@ -87,7 +88,6 @@
   <main id="main">
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-      <div id="particles-js"></div>
       <div class="hero-container" data-aos="fade-in">
         <div class="row">
           <div class="col-lg-8 cols-12 my-auto">
@@ -255,6 +255,15 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Volunteering</h3>
             <div class="resume-item">
+              <h4>President</h4>
+              <h5>2023 - Present</h5>
+              <p><em>ENSIAS AI Club</em></p>
+              <ul>
+                <li>Assuring AI trainings for the club</li>
+                <li>Working on AI projects</li> 
+              </ul>
+            </div>
+            <div class="resume-item">
               <h4>Training Manager</h4>
               <h5>2023 - Present</h5>
               <p><em>Junior HiveTech ENSIAS</em></p>
@@ -279,15 +288,6 @@
               <ul>
                 <li>Solving CP Problems</li>
                 <li>Improving coding skills</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Member of Training Cell</h4>
-              <h5>2022 - Present</h5>
-              <p><em>ENSIAS AI Club</em></p>
-              <ul>
-                <li>Assuring AI trainings for the club</li>
-                <li>Working on AI projects</li> 
               </ul>
             </div>
           </div>
@@ -490,6 +490,9 @@
   </footer><!-- End  Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <button onclick="playmusic()" class="music-btn stop d-flex align-items-center justify-content-center"><i class="music-icon bi bi-play"></i>
+    <audio id="mymusic" src="assets/music/ambient.mp3"></audio>
+  </button>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -505,6 +508,7 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/particles.js"></script> 
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/music.js"></script>
 
   <!-- Preloader -->
   <script src="assets/js/preloader.js"></script>
