@@ -331,6 +331,32 @@ main{
 }
 
 /*--------------------------------------------------------------
+# Music button
+--------------------------------------------------------------*/
+.music-btn {
+  position: fixed;
+  right: 15px;
+  bottom: 25px;
+  z-index: 9999;
+  background: var(--secondary-bg-color-transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.music-btn i {
+  font-size: 28px;
+  color: var(--color-1);;
+  line-height: 0;
+}
+
+.music-btn:hover {
+  background: var(--main-bg-color);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 .navbar .container{
