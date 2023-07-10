@@ -65,6 +65,14 @@ body {
   background-color: var(--main-bg-color);
 }
 
+#particles-js{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -999;
+  background: var(--main-bg-color);
+}
+
 a {
   color: var(--color-2);
   text-decoration: none;
@@ -473,13 +481,10 @@ main{
   border: none;
   box-shadow: none;
   border-radius: 0;
-}
-
-#particles-js{
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background: var(--main-bg-color);
+  background: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  margin-top: 0;
 }
 
 #hero .hero-container {
@@ -705,6 +710,8 @@ section {
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.7);
   overflow: hidden;
   background: var(--secondary-bg-color-transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .section-title h2 {
@@ -781,7 +788,7 @@ section {
 # Tools & Tech
 --------------------------------------------------------------*/
 .tools-tech{
-  background: var(--main-bg-color);
+  background: var(--primary-bg-color-transparent);
 }
 
 .tools-tech .tools-tech-icon{
@@ -892,7 +899,7 @@ section {
 # Projects Section
 --------------------------------------------------------------*/
 #projects {
-  background: var(--main-bg-color);
+  background: var(--primary-bg-color-transparent);
 }
 
 #projects .section-title{
@@ -1010,7 +1017,7 @@ section {
 --------------------------------------------------------------*/
 .contact {
   padding-bottom: 40px;
-  background: var(--main-bg-color);
+  background: var(--primary-bg-color-transparent);
 }
 
 .contact .info {
