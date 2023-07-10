@@ -6,6 +6,7 @@ function playmusic () {
     let musicicon = document.querySelector('.music-icon');
     let mymusic = document.getElementById('mymusic');
     mymusic.volume = 0.3;
+    mymusic.loop = true;
 
     if (musicbtn.classList.contains('stop')) {
         musicbtn.classList.replace('stop', 'play');
