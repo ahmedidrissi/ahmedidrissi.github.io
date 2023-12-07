@@ -1,2 +1,2 @@
 # MyPortfolio
-This is my personal website. To visit it : https://idrissiahmed.me/
+This is my personal website. Link: https://ahmedidrissi.github.io/
